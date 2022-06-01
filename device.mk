@@ -7,6 +7,9 @@
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
 
+# API level, the device has been commercially launched on
+PRODUCT_SHIPPING_API_LEVEL := 28
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
