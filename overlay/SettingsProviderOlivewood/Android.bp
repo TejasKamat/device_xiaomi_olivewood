@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "SettingsProviderOlivewood",
+    theme: "SettingsProviderOlivewood",
+    sdk_version: "current",
+    vendor: true,
+}

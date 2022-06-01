@@ -17,17 +17,20 @@ PRODUCT_SHIPPING_API_LEVEL := 28
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+# Overlay
+PRODUCT_PACKAGES += \
+    CarrierConfigOlivewood \
+    FrameworksOlivewood \
+    SettingsProviderOlivewood \
+    SettingsOlivewood \
+    SystemUIOlivewood \
+    TelephonyOlivewood \
+    TetheringOlivewood \
+    WifiOlivewood
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# RRO (Runtime Resource Overlay)
-PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

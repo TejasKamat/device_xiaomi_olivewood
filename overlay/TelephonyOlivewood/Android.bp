@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "TelephonyOlivewood",
+    theme: "TelephonyOlivewood",
+    sdk_version: "current",
+    vendor: true,
+}

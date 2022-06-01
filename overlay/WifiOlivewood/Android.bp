@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "WifiOlivewood",
+    theme: "WifiOlivewood",
+    sdk_version: "current",
+    vendor: true
+}
