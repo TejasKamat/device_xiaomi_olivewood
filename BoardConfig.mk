@@ -25,11 +25,11 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_BOARD_SUFFIX := _64
 
 # Device Properties
-TARGET_ODM_PROP := $(DEVICE_PATH)/odm.prop
-TARGET_PRODUCT_PROP := $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP := $(DEVICE_PATH)/system_ext.prop
-TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP := $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP := $(DEVICE_PATH)/configs/odm.prop
+TARGET_PRODUCT_PROP := $(DEVICE_PATH)/configs/product.prop
+TARGET_SYSTEM_EXT_PROP := $(DEVICE_PATH)/configs/system_ext.prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/configs/system.prop
+TARGET_VENDOR_PROP := $(DEVICE_PATH)/configs/vendor.prop
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
@@ -118,7 +118,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /mnt/vendor/persist:/persist
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_SYSTEM_EXT := system/system_ext
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # FM
 BOARD_HAVE_QCOM_FM := true
@@ -128,9 +128,9 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_olivewood
